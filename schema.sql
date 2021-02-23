@@ -25,6 +25,8 @@ salary INT NOT NULL
 
 --table for all employee data
 CREATE TABLE employee_data(
+CONSTRAINT "pk" PRIMARY KEY (
+	employee_number),
 employee_number INT NOT NULL,
 employee_title_id VARCHAR(30),
 birthdate DATE,
@@ -34,12 +36,8 @@ sex VARCHAR(10) NOT NULL,
 hire_date DATE NOT NULL
 );
 
---table for employess and their departments
+
+--table for employees and their departments
 CREATE TABLE employee_department(
 employee_number INT NOT NULL,
 department_number VARCHAR(20));
-
-
-
-
-
